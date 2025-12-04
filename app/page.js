@@ -8,12 +8,9 @@ import Marq2 from '@/components/common/Marq2';
 import Navbar from '@/components/common/Navbar';
 import Script from 'next/script';
 import Header from '@/components/home-personal/Header';
-import Clients from '@/components/common/Clients';
-import Blog from '@/components/home-digital-agency/Blog';
 import Testimonials from '@/components/home-modern-studio/Testimonials';
 import Marq from '@/components/home-personal/Marq';
 import About from '@/components/home-personal/About';
-import Services from '@/components/home-personal/Services';
 import Skills from '@/components/home-personal/Skills';
 import Portfolio from '@/components/home-personal/Portfolio';
 
