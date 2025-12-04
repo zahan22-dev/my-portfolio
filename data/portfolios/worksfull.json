@@ -1,0 +1,32 @@
+[
+  {
+    "img": "/dark/assets/imgs/works/full/smart-calc.png",
+    "link": "/dark/project1",
+    "title": "Avocado Cutter",
+    "subTitle": "Digital Design"
+  },
+  {
+    "img": "/dark/assets/imgs/works/full/idioms.png",
+    "link": "/dark/project2",
+    "title": "The joy of music",
+    "subTitle": "Branding"
+  },
+  {
+    "img": "/dark/assets/imgs/works/full/adwolf.png",
+    "link": "/dark/project3",
+    "title": "Bank Rebranding",
+    "subTitle": "Branding"
+  },
+  {
+    "img": "/dark/assets/imgs/works/full/5.jpg",
+    "link": "/dark/project5",
+    "title": "Carved Wood",
+    "subTitle": "Product Design"
+  },
+  {
+    "img": "/dark/assets/imgs/works/full/6.jpg",
+    "link": "/dark/project4",
+    "title": "Blom Air purifier",
+    "subTitle": "Digital Art"
+  }
+]

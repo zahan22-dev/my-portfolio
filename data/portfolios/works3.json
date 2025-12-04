@@ -1,0 +1,32 @@
+[
+  {
+    "img": "/dark/assets/imgs/works/3/0.jpg",
+    "title": "Branding",
+    "subTitle": "Artboard Studio",
+    "link": "/dark/project1"
+  },
+  {
+    "img": "/dark/assets/imgs/works/3/smart-calc.png",
+    "title": "Branding",
+    "subTitle": "Artboard Studio",
+    "link": "/dark/project2"
+  },
+  {
+    "img": "/dark/assets/imgs/works/3/idioms.png",
+    "title": "Branding",
+    "subTitle": "Artboard Studio",
+    "link": "/dark/project3"
+  },
+  {
+    "img": "/dark/assets/imgs/works/3/adwolf.png",
+    "title": "Branding",
+    "subTitle": "Artboard Studio",
+    "link": "/dark/project4"
+  },
+  {
+    "img": "/dark/assets/imgs/works/3/tespire.png",
+    "title": "Branding",
+    "subTitle": "Artboard Studio",
+    "link": "/dark/project5"
+  }
+]

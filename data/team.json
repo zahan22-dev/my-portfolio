@@ -1,0 +1,17 @@
+[
+  {
+    "img": "/assets/imgs/team/smart-calc.png",
+    "name": "Robert De Niro",
+    "subName": "Web Developer"
+  },
+  {
+    "img": "/assets/imgs/team/idioms.png",
+    "name": "Brendan Fraser",
+    "subName": "UI/UX Designer"
+  },
+  {
+    "img": "/assets/imgs/team/adwolf.png",
+    "name": "Ahmed Khaled",
+    "subName": "Web Designer"
+  }
+]
