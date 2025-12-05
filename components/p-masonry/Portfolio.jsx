@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect } from 'react';
+import Image from 'next/image';
 import initIsotope2 from '@/common/initIsotope2';
 function Portfolio() {
   useEffect(() => {
@@ -40,7 +41,7 @@ function Portfolio() {
           <div className="col-lg-6 items design">
             <div className="item mt-10">
               <div className="img">
-                <img src="/assets/imgs/works/4/hsmart-calc.png" alt="" />
+                <Image src="/assets/imgs/works/4/hsmart-calc.png" alt="" width={600} height={400} />
                 <div className="cont inline d-flex align-items-center">
                   <div>
                     <h5>
@@ -59,7 +60,7 @@ function Portfolio() {
           <div className="col-lg-3 items width2 marketing">
             <div className="item mt-10">
               <div className="img">
-                <img src="/assets/imgs/works/4/smart-calc.png" alt="" />
+                <Image src="/assets/imgs/works/4/smart-calc.png" alt="" width={300} height={300} />
                 <div className="cont">
                   <h5>
                     <a href="/project-details">A Nice guy</a>
@@ -74,7 +75,7 @@ function Portfolio() {
           <div className="col-lg-3 items width2 design">
             <div className="item mt-10">
               <div className="img">
-                <img src="/assets/imgs/works/4/idioms.png" alt="" />
+                <Image src="/assets/imgs/works/4/idioms.png" alt="" width={300} height={300} />
                 <div className="cont">
                   <h5>
                     <a href="/project-details">A Nice guy</a>
@@ -89,7 +90,7 @@ function Portfolio() {
           <div className="col-lg-3 items width2 design">
             <div className="item mt-10">
               <div className="img">
-                <img src="/assets/imgs/works/4/adwolf.png" alt="" />
+                <Image src="/assets/imgs/works/4/adwolf.png" alt="" width={300} height={300} />
                 <div className="cont">
                   <h5>
                     <a href="/project-details">A Nice guy</a>
@@ -104,7 +105,7 @@ function Portfolio() {
           <div className="col-lg-3 items width2 marketing">
             <div className="item mt-10">
               <div className="img">
-                <img src="/assets/imgs/works/4/tespire.png" alt="" />
+                <Image src="/assets/imgs/works/4/tespire.png" alt="" width={300} height={300} />
                 <div className="cont">
                   <h5>
                     <a href="/project-details">A Nice guy</a>
@@ -119,7 +120,7 @@ function Portfolio() {
           <div className="col-lg-6 items marketing">
             <div className="item mt-10">
               <div className="img">
-                <img src="/assets/imgs/works/4/hidioms.png" alt="" />
+                <Image src="/assets/imgs/works/4/hidioms.png" alt="" width={600} height={400} />
                 <div className="cont inline d-flex align-items-center">
                   <div>
                     <h5>
@@ -138,7 +139,7 @@ function Portfolio() {
           <div className="col-lg-6 items development">
             <div className="item mt-10">
               <div className="img">
-                <img src="/assets/imgs/works/4/hadwolf.png" alt="" />
+                <Image src="/assets/imgs/works/4/hadwolf.png" alt="" width={600} height={400} />
                 <div className="cont inline d-flex align-items-center">
                   <div>
                     <h5>
@@ -157,7 +158,7 @@ function Portfolio() {
           <div className="col-lg-6 items development">
             <div className="item mt-10">
               <div className="img">
-                <img src="/assets/imgs/works/4/htespire.png" alt="" />
+                <Image src="/assets/imgs/works/4/htespire.png" alt="" width={600} height={400} />
                 <div className="cont inline d-flex align-items-center">
                   <div>
                     <h5>

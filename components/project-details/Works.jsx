@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 function Works() {
   return (
@@ -7,12 +8,12 @@ function Works() {
         <div className="row">
           <div className="col-lg-6">
             <div className="img md-mb30">
-              <img src="/assets/imgs/works/3/idioms.png" alt="" />
+              <Image src="/assets/imgs/works/3/idioms.png" alt="" width={600} height={400} />
             </div>
           </div>
           <div className="col-lg-6">
             <div className="img">
-              <img src="/assets/imgs/works/3/adwolf.png" alt="" />
+              <Image src="/assets/imgs/works/3/adwolf.png" alt="" width={600} height={400} />
             </div>
           </div>
         </div>

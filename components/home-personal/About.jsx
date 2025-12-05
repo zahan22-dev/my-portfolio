@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 function About() {
   return (
@@ -8,19 +9,19 @@ function About() {
           <div className="col-lg-5 valign">
             <div className="profile-img">
               <div className="img">
-                <img src="/assets/imgs/header/p2.png" alt="" />
+                <Image src="/assets/imgs/header/p2.png" alt="" width={400} height={400} />
               </div>
               <span className="icon">
-                <img src="/assets/imgs/resume/icon4.png" alt="" />
+                <Image src="/assets/imgs/resume/icon4.png" alt="" width={60} height={60} />
               </span>
               <span className="icon">
-                <img src="/assets/imgs/resume/icon1.png" alt="" />
+                <Image src="/assets/imgs/resume/icon1.png" alt="" width={60} height={60} />
               </span>
               <span className="icon">
-                <img src="/assets/imgs/resume/icon2.png" alt="" />
+                <Image src="/assets/imgs/resume/icon2.png" alt="" width={60} height={60} />
               </span>
               <span className="icon">
-                <img src="/assets/imgs/resume/icon3.png" alt="" />
+                <Image src="/assets/imgs/resume/icon3.png" alt="" width={60} height={60} />
               </span>
             </div>
           </div>
@@ -38,7 +39,7 @@ function About() {
                 <p>
                   I enjoy turning complex ideas into fast, clean, and user-friendly web experiences.
                   My goal is to build websites that clearly communicate your brand and deliver real results.
-                  I've developed modern web solutions for multiple businesses and growing brands.
+                  I&apos;ve developed modern web solutions for multiple businesses and growing brands.
                 </p>
 
                 <div className="numbers mt-50">
@@ -53,7 +54,7 @@ function About() {
                         </div>
                         <div className="ml-auto">
                           <div className="icon-img-40">
-                            <img src="/assets/imgs/arw0.png" alt="" />
+                            <Image src="/assets/imgs/arw0.png" alt="" width={40} height={40} />
                           </div>
                         </div>
                       </div>
@@ -68,7 +69,7 @@ function About() {
                         </div>
                         <div className="ml-auto">
                           <div className="icon-img-40">
-                            <img src="/assets/imgs/arw0.png" alt="" />
+                            <Image src="/assets/imgs/arw0.png" alt="" width={40} height={40} />
                           </div>
                         </div>
                       </div>

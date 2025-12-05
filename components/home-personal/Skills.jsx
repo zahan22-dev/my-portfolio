@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 function Skills() {
   return (
@@ -19,7 +20,7 @@ function Skills() {
             <div className="item mb-30">
               <div className="box-bord">
                 <div className="img">
-                  <img src="/assets/imgs/resume/nextjs.png" alt="" />
+                  <Image src="/assets/imgs/resume/nextjs.png" alt="" width={150} height={150} />
                 </div>
                 <span className="value">95%</span>
               </div>
@@ -30,7 +31,7 @@ function Skills() {
             <div className="item mb-30">
               <div className="box-bord">
                 <div className="img">
-                  <img src="/assets/imgs/resume/reactjs.png" alt="" />
+                  <Image src="/assets/imgs/resume/reactjs.png" alt="" width={150} height={150} />
                 </div>
                 <span className="value">90%</span>
               </div>
@@ -41,7 +42,7 @@ function Skills() {
             <div className="item mb-30">
               <div className="box-bord">
                 <div className="img">
-                  <img src="/assets/imgs/resume/python.png" alt="" />
+                  <Image src="/assets/imgs/resume/python.png" alt="" width={150} height={150} />
                 </div>
                 <span className="value">85%</span>
               </div>
@@ -52,7 +53,7 @@ function Skills() {
             <div className="item mb-30">
               <div className="box-bord">
                 <div className="img">
-                  <img src="/assets/imgs/resume/s5.png" alt="" />
+                  <Image src="/assets/imgs/resume/s5.png" alt="" width={150} height={150} />
                 </div>
                 <span className="value">84%</span>
               </div>
@@ -63,7 +64,7 @@ function Skills() {
             <div className="item mb-30">
               <div className="box-bord">
                 <div className="img">
-                  <img src="/assets/imgs/resume/icon3.png" alt="" />
+                  <Image src="/assets/imgs/resume/icon3.png" alt="" width={150} height={150} />
                 </div>
                 <span className="value">85%</span>
               </div>
@@ -74,7 +75,7 @@ function Skills() {
             <div className="item mb-30">
               <div className="box-bord">
                 <div className="img">
-                  <img src="/assets/imgs/resume/s6.png" alt="" />
+                  <Image src="/assets/imgs/resume/s6.png" alt="" width={150} height={150} />
                 </div>
                 <span className="value">85%</span>
               </div>

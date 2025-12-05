@@ -1,5 +1,6 @@
 'use client';
 import initIsotope from '@/common/initIsotope';
+import Image from 'next/image';
 import React, { useEffect, useLayoutEffect } from 'react';
 
 function Portfolio() {
@@ -41,7 +42,7 @@ function Portfolio() {
           <div className="col-lg-4 col-md-6 items design">
             <div className="item mb-50">
               <div className="img">
-                <img src="/assets/imgs/works/2/smart-calc.png" alt="" />
+                <Image src="/assets/imgs/works/2/smart-calc.png" alt="" width={400} height={300} />
               </div>
               <div className="cont d-flex align-items-end mt-30">
                 <div>
@@ -59,7 +60,7 @@ function Portfolio() {
           <div className="col-lg-4 col-md-6 items marketing">
             <div className="item mb-50">
               <div className="img">
-                <img src="/assets/imgs/works/2/idioms.png" alt="" />
+                <Image src="/assets/imgs/works/2/idioms.png" alt="" width={400} height={300} />
               </div>
               <div className="cont d-flex align-items-end mt-30">
                 <div>
@@ -77,7 +78,7 @@ function Portfolio() {
           <div className="col-lg-4 col-md-6 items design">
             <div className="item mb-50">
               <div className="img">
-                <img src="/assets/imgs/works/2/adwolf.png" alt="" />
+                <Image src="/assets/imgs/works/2/adwolf.png" alt="" width={400} height={300} />
               </div>
               <div className="cont d-flex align-items-end mt-30">
                 <div>
@@ -95,7 +96,7 @@ function Portfolio() {
           <div className="col-lg-4 col-md-6 items development">
             <div className="item mb-50">
               <div className="img">
-                <img src="/assets/imgs/works/2/tespire.png" alt="" />
+                <Image src="/assets/imgs/works/2/tespire.png" alt="" width={400} height={300} />
               </div>
               <div className="cont d-flex align-items-end mt-30">
                 <div>
@@ -113,7 +114,7 @@ function Portfolio() {
           <div className="col-lg-4 col-md-6 items design">
             <div className="item mb-50">
               <div className="img">
-                <img src="/assets/imgs/works/2/5.jpg" alt="" />
+                <Image src="/assets/imgs/works/2/5.jpg" alt="" width={400} height={300} />
               </div>
               <div className="cont d-flex align-items-end mt-30">
                 <div>
@@ -131,7 +132,7 @@ function Portfolio() {
           <div className="col-lg-4 col-md-6 items marketing">
             <div className="item mb-50">
               <div className="img">
-                <img src="/assets/imgs/works/2/6.jpg" alt="" />
+                <Image src="/assets/imgs/works/2/6.jpg" alt="" width={400} height={300} />
               </div>
               <div className="cont d-flex align-items-end mt-30">
                 <div>
@@ -149,7 +150,7 @@ function Portfolio() {
           <div className="col-lg-4 col-md-6 items marketing">
             <div className="item mb-50">
               <div className="img">
-                <img src="/assets/imgs/works/2/7.jpg" alt="" />
+                <Image src="/assets/imgs/works/2/7.jpg" alt="" width={400} height={300} />
               </div>
               <div className="cont d-flex align-items-end mt-30">
                 <div>
@@ -167,7 +168,7 @@ function Portfolio() {
           <div className="col-lg-4 col-md-6 items development">
             <div className="item mb-50">
               <div className="img">
-                <img src="/assets/imgs/works/2/8.jpg" alt="" />
+                <Image src="/assets/imgs/works/2/8.jpg" alt="" width={400} height={300} />
               </div>
               <div className="cont d-flex align-items-end mt-30">
                 <div>
@@ -185,7 +186,7 @@ function Portfolio() {
           <div className="col-lg-4 col-md-6 items development">
             <div className="item mb-50">
               <div className="img">
-                <img src="/assets/imgs/works/2/9.jpg" alt="" />
+                <Image src="/assets/imgs/works/2/9.jpg" alt="" width={400} height={300} />
               </div>
               <div className="cont d-flex align-items-end mt-30">
                 <div>

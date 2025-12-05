@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 function Portfolio() {
   return (
@@ -8,7 +9,7 @@ function Portfolio() {
           <div className="col-lg-5">
             <div className="item mb-80 mt-40">
               <div className="img">
-                <img src="/assets/imgs/works/grid/smart-calc.png" alt="" />
+                <Image src="/assets/imgs/works/grid/smart-calc.png" alt="" width={600} height={400} />
               </div>
               <div className="cont d-flex align-items-end mt-30">
                 <div>
@@ -26,7 +27,7 @@ function Portfolio() {
           <div className="col-lg-5 offset-lg-1">
             <div className="item mb-80 mt-40">
               <div className="img">
-                <img src="/assets/imgs/works/grid/idioms.png" alt="" />
+                <Image src="/assets/imgs/works/grid/idioms.png" alt="" width={600} height={400} />
               </div>
               <div className="cont d-flex align-items-end mt-30">
                 <div>
@@ -44,7 +45,7 @@ function Portfolio() {
           <div className="col-lg-8 offset-lg-2">
             <div className="item mb-80 mt-40">
               <div className="img">
-                <img src="/assets/imgs/works/grid/adwolf.png" alt="" />
+                <Image src="/assets/imgs/works/grid/adwolf.png" alt="" width={800} height={500} />
               </div>
               <div className="cont d-flex align-items-end mt-30">
                 <div>
@@ -62,7 +63,7 @@ function Portfolio() {
           <div className="col-lg-5 d-flex align-items-end">
             <div className="item mb-80 mt-40">
               <div className="img">
-                <img src="/assets/imgs/works/grid/tespire.png" alt="" />
+                <Image src="/assets/imgs/works/grid/tespire.png" alt="" width={600} height={400} />
               </div>
               <div className="cont d-flex align-items-end mt-30">
                 <div>
@@ -80,7 +81,7 @@ function Portfolio() {
           <div className="col-lg-5 offset-lg-2">
             <div className="item mb-80 mt-40">
               <div className="img">
-                <img src="/assets/imgs/works/grid/5.jpg" alt="" />
+                <Image src="/assets/imgs/works/grid/5.jpg" alt="" width={600} height={400} />
               </div>
               <div className="cont d-flex align-items-end mt-30">
                 <div>
@@ -98,7 +99,7 @@ function Portfolio() {
           <div className="col-lg-8 offset-lg-2">
             <div className="item mt-40">
               <div className="img">
-                <img src="/assets/imgs/works/grid/6.jpg" alt="" />
+                <Image src="/assets/imgs/works/grid/6.jpg" alt="" width={800} height={500} />
               </div>
               <div className="cont d-flex align-items-end mt-30">
                 <div>

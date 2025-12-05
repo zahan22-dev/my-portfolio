@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useLayoutEffect } from 'react';
+import Image from 'next/image';
 import { gsap } from 'gsap';
 import loadBackgroudImages from '@/common/loadBackgroudImages';
 import Typed from 'typed.js';
@@ -43,7 +44,7 @@ function Header() {
             <div className="caption">
               <h6 className="mb-15">
                 <span className="icon-img-30 mr-10">
-                  <img src="/assets/imgs/header/hi.png" alt="" />
+                  <Image src="/assets/imgs/header/hi.png" alt="" width={30} height={30} />
                 </span>{' '}
                 Hello! there
               </h6>
@@ -69,9 +70,11 @@ function Header() {
                       <span className="text">Contact Me</span>
                     </a>
                     <div className="icon-img-60 ml-20">
-                      <img
+                      <Image
                         src="/assets/imgs/icon-img/arrow-down-big.png"
                         alt=""
+                        width={60}
+                        height={60}
                       />
                     </div>
                   </div>

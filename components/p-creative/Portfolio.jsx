@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect } from 'react';
+import Image from 'next/image';
 import data from '@/data/portfolios/works1';
 import loadBackgroudImages from '@/common/loadBackgroudImages';
 
@@ -34,9 +35,11 @@ function Portfolio() {
                     </div>
                     <div className="ml-auto">
                       <a href="/project-details" className="arrow">
-                        <img
+                        <Image
                           src="/assets/imgs/icon-img/arrow-down-big.png"
                           alt=""
+                          width={40}
+                          height={40}
                         />
                       </a>
                     </div>

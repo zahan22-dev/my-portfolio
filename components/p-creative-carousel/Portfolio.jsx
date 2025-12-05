@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Image from 'next/image';
 import data from '@/data/portfolios/works1';
 import { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -70,7 +71,7 @@ function Portfolio() {
                     </a>
                   </div>
                   <div className="img">
-                    <img src={item.img} alt="" className="radius-15" />
+                    <Image src={item.img} alt="" width={600} height={500} className="radius-15" />
                   </div>
                 </div>
               </SwiperSlide>

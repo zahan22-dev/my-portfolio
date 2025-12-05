@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect } from 'react';
+import Image from 'next/image';
 
 function Portfolio() {
   function Playing() {
@@ -96,7 +97,7 @@ function Portfolio() {
               </div>
               <div className="col-lg-7">
                 <div className="img">
-                  <img src="/assets/imgs/works/generated/smart-calc.png" alt="" />
+                  <Image src="/assets/imgs/works/generated/smart-calc.png" alt="" width={700} height={500} />
                 </div>
               </div>
             </div>
@@ -130,7 +131,7 @@ function Portfolio() {
               </div>
               <div className="col-lg-7">
                 <div className="img">
-                  <img src="/assets/imgs/works/generated/idioms.png" alt="" />
+                  <Image src="/assets/imgs/works/generated/idioms.png" alt="" width={700} height={500} />
                 </div>
               </div>
             </div>
@@ -165,7 +166,7 @@ function Portfolio() {
               </div>
               <div className="col-lg-7">
                 <div className="img">
-                  <img src="/assets/imgs/works/generated/adwolf.png" alt="" />
+                  <Image src="/assets/imgs/works/generated/adwolf.png" alt="" width={700} height={500} />
                 </div>
               </div>
             </div>
@@ -200,7 +201,7 @@ function Portfolio() {
               </div>
               <div className="col-lg-7">
                 <div className="img">
-                  <img src="/assets/imgs/works/generated/tespire.png" alt="" />
+                  <Image src="/assets/imgs/works/generated/tespire.png" alt="" width={700} height={500} />
                 </div>
               </div>
             </div>
@@ -235,7 +236,7 @@ function Portfolio() {
               </div>
               <div className="col-lg-7">
                 <div className="img">
-                  <img src="/assets/imgs/works/generated/burqora.png" alt="" />
+                  <Image src="/assets/imgs/works/generated/burqora.png" alt="" width={700} height={500} />
                 </div>
               </div>
             </div>
@@ -270,7 +271,7 @@ function Portfolio() {
               </div>
               <div className="col-lg-7">
                 <div className="img">
-                  <img src="/assets/imgs/works/generated/salesflo.png" alt="" />
+                  <Image src="/assets/imgs/works/generated/salesflo.png" alt="" width={700} height={500} />
                 </div>
               </div>
             </div>
@@ -305,7 +306,7 @@ function Portfolio() {
               </div>
               <div className="col-lg-7">
                 <div className="img">
-                  <img src="/assets/imgs/works/generated/myzoi.png" alt="" />
+                  <Image src="/assets/imgs/works/generated/myzoi.png" alt="" width={700} height={500} />
                 </div>
               </div>
             </div>
@@ -340,7 +341,7 @@ function Portfolio() {
               </div>
               <div className="col-lg-7">
                 <div className="img">
-                  <img src="/assets/imgs/works/1/3.png" alt="" />
+                  <Image src="/assets/imgs/works/1/3.png" alt="" width={700} height={500} />
                 </div>
               </div>
             </div>

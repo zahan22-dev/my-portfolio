@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 function Services() {
   return (
@@ -29,7 +30,7 @@ function Services() {
           <div className="col-lg-4">
             <div className="item sub-bg md-mb30">
               <div className="icon-img-60 opacity-5 mb-40">
-                <img src="/assets/imgs/serv-icons/adwolf.png" alt="" />
+                <Image src="/assets/imgs/serv-icons/adwolf.png" alt="" width={150} height={150} />
               </div>
               <h5>UI/UX Design</h5>
               <div className="text mt-40">
@@ -50,7 +51,7 @@ function Services() {
           <div className="col-lg-4">
             <div className="item sub-bg md-mb30">
               <div className="icon-img-60 opacity-5 mb-40">
-                <img src="/assets/imgs/serv-icons/tespire.png" alt="" />
+                <Image src="/assets/imgs/serv-icons/tespire.png" alt="" width={150} height={150} />
               </div>
               <h5>Brand Strategy</h5>
               <div className="text mt-40">
@@ -71,7 +72,7 @@ function Services() {
           <div className="col-lg-4">
             <div className="item sub-bg">
               <div className="icon-img-60 opacity-5 mb-40">
-                <img src="/assets/imgs/serv-icons/burqora.png" alt="" />
+                <Image src="/assets/imgs/serv-icons/burqora.png" alt="" width={150} height={150} />
               </div>
               <h5>SEO / Marketing</h5>
               <div className="text mt-40">

@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect } from 'react';
+import Image from 'next/image';
 
 function Navbar() {
   function handleScroll() {
@@ -43,7 +44,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg bord blur">
       <div className="container py-3 o-hidden">
         <a className="logo icon-img-100" href="/">
-          <img src="/assets/imgs/logo-light.png" alt="logo" />
+          <Image src="/assets/imgs/logo-light.png" alt="logo" width={100} height={100} />
         </a>
 
         <button
@@ -87,7 +88,7 @@ function Navbar() {
                     <div className="col-lg">
                       <a className="item-img text-center" href="/home-main">
                         <span className="img">
-                          <img src="/assets/imgs/menu/smart-calc.png" alt="" />
+                          <Image src="/assets/imgs/menu/smart-calc.png" alt="" width={300} height={200} />
                         </span>
                         <span className="mt-15">Main Home</span>
                       </a>
@@ -98,7 +99,7 @@ function Navbar() {
                         href="/home-modern-studio"
                       >
                         <span className="img">
-                          <img src="/assets/imgs/menu/idioms.png" alt="" />
+                          <Image src="/assets/imgs/menu/idioms.png" alt="" width={300} height={200} />
                         </span>
                         <span className="mt-15">Modern Studio</span>
                       </a>
@@ -109,7 +110,7 @@ function Navbar() {
                         href="/home-creative-agency"
                       >
                         <span className="img">
-                          <img src="/assets/imgs/menu/adwolf.png" alt="" />
+                          <Image src="/assets/imgs/menu/adwolf.png" alt="" width={300} height={200} />
                         </span>
                         <span className="mt-15">Creative Agency</span>
                       </a>
@@ -120,7 +121,7 @@ function Navbar() {
                         href="/home-digital-agency"
                       >
                         <span className="img">
-                          <img src="/assets/imgs/menu/tespire.png" alt="" />
+                          <Image src="/assets/imgs/menu/tespire.png" alt="" width={300} height={200} />
                         </span>
                         <span className="mt-15">Digital Agency</span>
                       </a>
@@ -128,7 +129,7 @@ function Navbar() {
                     <div className="col-lg">
                       <a className="item-img text-center" href="/home-personal">
                         <span className="img">
-                          <img src="/assets/imgs/menu/burqora.png" alt="" />
+                          <Image src="/assets/imgs/menu/burqora.png" alt="" width={300} height={200} />
                         </span>
                         <span className="mt-15">Freelancer</span>
                       </a>
