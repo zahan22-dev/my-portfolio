@@ -27,7 +27,7 @@ function Footer() {
           </div>
           <div className="col-lg-3">
             <div className="column subscribe-minimal">
-              <h6 className="sub-title mb-30">Newsletter</h6>
+              <h6 className="sub-title mb-30">Subscribe</h6>
               <div className="form-group mb-40">
                 <input type="text" name="subscrib" placeholder="Your Email" />
                 <button>
@@ -35,21 +35,16 @@ function Footer() {
                 </button>
               </div>
               <ul className="rest social-icon d-flex align-items-center">
-                <li className="hover-this cursor-pointer">
-                  <a href="#0" className="hover-anim">
-                    <i className="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li className="hover-this cursor-pointer ml-10">
-                  <a href="https://www.linkedin.com/in/zahan-uddin-khan-25931b289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " className="hover-anim">
+                <a href="https://www.linkedin.com/in/zahan-uddin-khan-25931b289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover-anim">
+                  <li className="hover-this cursor-pointer ml-10">
                     <i className="fab fa-linkedin-in"></i>
-                  </a>
-                </li>
-                <li className="hover-this cursor-pointer ml-10">
-                  <a href="https://www.instagram.com/zahan__22?igsh=ZDQ4bzQzbmM2ZWpi" className="hover-anim">
+                  </li>
+                </a>
+                <a href="https://www.instagram.com/zahan__22?igsh=ZDQ4bzQzbmM2ZWpi" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover-anim">
+                  <li className="hover-this cursor-pointer ml-10">
                     <i className="fab fa-instagram"></i>
-                  </a>
-                </li>
+                  </li>
+                </a>
               </ul>
             </div>
           </div>

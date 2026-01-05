@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { gsap } from 'gsap';
 import loadBackgroudImages from '@/common/loadBackgroudImages';
 import Typed from 'typed.js';
+import Link from 'next/link';
 
 function Header() {
   useLayoutEffect(() => {
@@ -64,7 +65,7 @@ function Header() {
                   </div>
                   <div className="d-flex align-items-center mt-60">
                     <a
-                      href="/page-contact"
+                      href="/contact-me"
                       className="butn butn-md butn-bord radius-30"
                     >
                       <span className="text">Contact Me</span>
@@ -86,16 +87,13 @@ function Header() {
         <div className="info d-flex align-items-center justify-content-end mt-100">
           <div className="item">
             <h6 className="sub-title mb-10">Email :</h6>
-            <span className="p-color">zahankhan453@gmail.com</span>
+            <span className="p-color"><Link href="mailto:zahankhan453@gmail.com">zahankhan453@gmail.com</Link></span>
           </div>
           <div className="item">
             <h6 className="sub-title mb-10">Phone :</h6>
-            <span className="p-color">+92 315 1029933</span>
+            <span className="p-color"><Link href="tel:+923151029933">+92 315 1029933</Link></span>
           </div>
-          <div className="item">
-            <h6 className="sub-title mb-10">Address :</h6>
-            <span className="p-color">491, 36/C, Korangi no 5, Karachi</span>
-          </div>
+
         </div>
       </div>
     </div>

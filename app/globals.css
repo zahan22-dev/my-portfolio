@@ -1,4 +1,168 @@
-.navbar-nav{
+.navbar-nav {
     display: none !important;
 
+}
+
+.rest.social-icon {
+    display: flex !important;
+    justify-content: left;
+    gap: 16px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.rest.social-icon a,
+.rest.social-icon li {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    text-decoration: none;
+}
+
+/* handle both structures: a > li  and li > a */
+.rest.social-icon a>li,
+.rest.social-icon li>a,
+.rest.social-icon li {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.02);
+    transition: transform .22s, box-shadow .22s, background .22s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.rest.social-icon a:hover>li,
+.rest.social-icon li>a:hover,
+.rest.social-icon a:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 2px 8px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, #ff6b61, #ff9a76);
+}
+
+@media (max-width: 768px) {
+    .rest.social-icon {
+        gap: 12px;
+    }
+
+    .rest.social-icon a>li,
+    .rest.social-icon li>a,
+    .rest.social-icon li {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Portfolio Card Height Fix */
+.work-card .card-item {
+    min-height: auto !important;
+    height: auto !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.work-card .card-item .row {
+    align-items: center;
+    min-height: 450px;
+}
+
+.work-card .card-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 107, 97, 0.3);
+}
+
+/* Creative Enhancements */
+.work-card .card-item .img {
+    position: relative;
+    overflow: hidden;
+}
+
+.work-card .card-item .img img {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.work-card .card-item:hover .img img {
+    transform: scale(1.08) rotate(1deg);
+}
+
+.work-card .card-item .img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 107, 97, 0.1), rgba(255, 154, 118, 0.1));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.work-card .card-item:hover .img::before {
+    opacity: 1;
+}
+
+.work-card .card-item .cont .tag {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.work-card .card-item .cont .tag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.work-card .card-item:hover .cont .tag::before {
+    left: 100%;
+}
+
+.work-card .card-item h4 {
+    transition: color 0.3s ease;
+}
+
+.work-card .card-item:hover h4 {
+    background: linear-gradient(135deg, #ff6b61, #ff9a76);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Smooth animations */
+@media (prefers-reduced-motion: no-preference) {
+    .work-card .card-item {
+        animation: fadeInUp 0.6s ease-out backwards;
+    }
+    
+    .work-card .card-item:nth-child(1) { animation-delay: 0.1s; }
+    .work-card .card-item:nth-child(2) { animation-delay: 0.2s; }
+    .work-card .card-item:nth-child(3) { animation-delay: 0.3s; }
+    .work-card .card-item:nth-child(4) { animation-delay: 0.4s; }
+    .work-card .card-item:nth-child(5) { animation-delay: 0.5s; }
+    .work-card .card-item:nth-child(6) { animation-delay: 0.6s; }
+    .work-card .card-item:nth-child(7) { animation-delay: 0.7s; }
+    .work-card .card-item:nth-child(8) { animation-delay: 0.8s; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

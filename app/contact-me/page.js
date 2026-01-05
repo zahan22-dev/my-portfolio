@@ -6,9 +6,9 @@ import LoadingScreen from '@/components/common/loader';
 import Footer from '@/components/common/Footer';
 import Navbar from '@/components/common/Navbar';
 import Script from 'next/script';
-import Header from '@/components/page-contact/Header';
-import Contact from '@/components/page-contact/Contact';
-import Map from '@/components/page-contact/Map';
+import Header from '@/components/contact-me/Header';
+import Contact from '@/components/contact-me/Contact';
+import Map from '@/components/contact-me/Map';
 
 export const metadata = {
   title: 'zahan',

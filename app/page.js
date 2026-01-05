@@ -15,7 +15,8 @@ import Skills from '@/components/home-personal/Skills';
 import Portfolio from '@/components/home-personal/Portfolio';
 
 export const metadata = {
-  title: 'zahan',
+  title: 'Zahan - Full Stack Developer & UI/UX Designer Portfolio',
+  description: 'Explore Zahan\'s portfolio featuring modern web applications, creative UI/UX designs, and innovative digital solutions. Specializing in React, Next.js, and full-stack development.',
   icons: {
     icon: '/assets/imgs/favicon.ico',
     shortcut: '/assets/imgs/favicon.ico',
@@ -29,8 +30,26 @@ export const metadata = {
 };
 
 export default function Home() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Zahan',
+    jobTitle: 'Full Stack Developer',
+    description: 'Full Stack Developer specializing in modern web applications, React, Next.js, and creative UI/UX design',
+    url: 'https://zahan-portfolio.vercel.app',
+    sameAs: [
+      'https://github.com/zahan22',
+      'https://linkedin.com/in/zahan',
+    ],
+    knowsAbout: ['Web Development', 'React', 'Next.js', 'JavaScript', 'TypeScript', 'UI/UX Design', 'Full Stack Development'],
+  };
+
   return (
     <body className="home-personal">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <LoadingScreen />
       <Cursor />
       <ProgressScroll />

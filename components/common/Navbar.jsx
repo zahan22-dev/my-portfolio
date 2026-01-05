@@ -180,7 +180,7 @@ function Navbar() {
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="/page-contact">
+                  <a className="dropdown-item" href="/contact-me">
                     Contact Us
                   </a>
                 </li>
@@ -266,7 +266,7 @@ function Navbar() {
               </div>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/page-contact">
+              <a className="nav-link" href="/contact-me">
                 <span className="rolling-text">Contact Us</span>
               </a>
             </li>
@@ -275,7 +275,7 @@ function Navbar() {
 
         <div className="contact-button">
           <a
-            href="/page-contact"
+            href="/contact-me"
             className="butn butn-sm butn-bg main-colorbg radius-5"
           >
             <span className="text">Let&apos;s contact</span>
