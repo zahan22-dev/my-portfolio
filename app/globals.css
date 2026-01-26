@@ -166,3 +166,197 @@
         transform: translateY(0);
     }
 }
+
+/* =========================================
+   Modern Portfolio Redesign Styles
+   ========================================= */
+:root {
+  --portfolio-primary: #fd5b38;
+}
+
+.portfolio-modern-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.portfolio-card-modern {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #151515;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-card-modern:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    border-color: rgba(253, 91, 56, 0.4);
+}
+
+/* Image Wrapper */
+.portfolio-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+}
+
+.portfolio-image-wrapper img {
+    transition: transform 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-card-modern:hover .portfolio-image-wrapper img {
+    transform: scale(1.08);
+}
+
+/* Overlay for Image */
+.portfolio-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%);
+    opacity: 0.6;
+    transition: opacity 0.4s ease;
+}
+
+.portfolio-card-modern:hover .portfolio-image-overlay {
+    opacity: 0.3;
+}
+
+/* Content Area */
+.portfolio-content-modern {
+    padding: 24px 28px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: #151515;
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Tags */
+.portfolio-tags-modern {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.portfolio-tag-modern {
+    background: rgba(255, 255, 255, 0.03);
+    color: #ccc;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.portfolio-card-modern:hover .portfolio-tag-modern {
+    background: rgba(253, 91, 56, 0.15);
+    color: var(--portfolio-primary);
+    border-color: rgba(253, 91, 56, 0.4);
+}
+
+/* Title */
+.portfolio-title-modern {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.portfolio-card-modern:hover .portfolio-title-modern {
+    background: linear-gradient(90deg, #fff, #fd5b38);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Description */
+.portfolio-desc-modern {
+    font-size: 14px;
+    color: #999;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-weight: 400;
+}
+
+/* Button */
+.portfolio-link-wrapper {
+    margin-top: auto;
+}
+
+.portfolio-link-modern {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.portfolio-link-modern::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    transform-origin: left;
+}
+
+.portfolio-link-modern:hover {
+    color: var(--portfolio-primary);
+}
+
+.portfolio-link-modern:hover::after {
+    background: var(--portfolio-primary);
+    height: 2px;
+}
+
+.portfolio-link-modern i {
+    margin-left: 6px;
+    font-size: 12px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.portfolio-link-modern:hover i {
+    transform: translate(4px, -4px);
+}
+
+@media (max-width: 768px) {
+    .portfolio-modern-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-card-modern:hover {
+        transform: translateY(-5px);
+    }
+}

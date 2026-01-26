@@ -1,60 +1,13 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import Image from 'next/image';
-import { gsap } from 'gsap';
+import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+gsap.registerPlugin(ScrollTrigger);
+
 function Portfolio() {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-
-  function Playing() {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const cards = document.querySelectorAll('.cards .card-item');
-    let stickDistance = 0;
-
-    if (cards.length === 0) return;
-
-    const firstCardST = ScrollTrigger.create({
-      trigger: cards[0],
-      start: 'center center',
-    });
-
-    const lastCardST = ScrollTrigger.create({
-      trigger: cards[cards.length - 1],
-      start: 'bottom bottom',
-    });
-
-    cards.forEach((card, index) => {
-      const scale = 1 - (cards.length - index) * 0.025;
-      const scaleDown = gsap.to(card, {
-        scale: scale,
-        transformOrigin: '50% ' + (lastCardST.start + stickDistance),
-      });
-
-      ScrollTrigger.create({
-        trigger: card,
-        start: 'center center',
-        end: () => lastCardST.start + stickDistance,
-        pin: true,
-        pinSpacing: false,
-        ease: 'none',
-        animation: scaleDown,
-        toggleActions: 'restart none none reverse',
-      });
-    });
-  }
-  
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      Playing();
-    }, 100);
-
-    return () => {
-      clearTimeout(timer);
-      ScrollTrigger.getAll().forEach((instance) => instance.kill());
-    };
-  }, []);
+  const containerRef = useRef(null);
 
   const projects = [
     {
@@ -123,8 +76,30 @@ function Portfolio() {
     },
   ];
 
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        '.portfolio-card-modern',
+        { y: 60, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '.portfolio-modern-grid',
+            start: 'top 85%',
+          },
+        }
+      );
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="work-card section-padding pb-0">
+    <section className="work-card section-padding pb-0" ref={containerRef}>
       <div className="container">
         <div className="sec-head mb-80">
           <div className="d-flex align-items-center">
@@ -138,75 +113,54 @@ function Portfolio() {
             </div>
           </div>
         </div>
-        <div className="cards">
+        
+        <div className="portfolio-modern-grid">
           {projects.map((project, index) => (
-            <div 
-              className="card-item sub-bg" 
-              key={index}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-              style={{
-                willChange: hoveredIndex === index ? 'transform, box-shadow' : 'auto'
-              }}
-            >
-              <div className="row">
-                <div className="col-lg-5">
-                  <div className="cont">
-                    <div>
-                      <div className="mb-20">
-                        {project.tags.map((tag, i) => (
-                          <span
-                            key={i}
-                            className="tag"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                      <h4 className="mb-15 fz-24 fw-600">{project.title}</h4>
-                      <p className="fz-16 opacity-8">{project.description}</p>
-                    </div>
-                    <div className="mt-30">
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="butn-crev d-flex align-items-center"
-                        aria-label={`Launch ${project.title}`}
-                      >
-                        <span className="hover-this">
-                          <span className="circle hover-anim d-flex align-items-center justify-content-center">
-                            <i className="ti-arrow-top-right fz-18"></i>
-                          </span>
-                        </span>
-                        <span className="text ml-15 fz-14 ls1 text-u fw-500">
-                          Launch Project
-                        </span>
-                      </a>
-                    </div>
-                  </div>
+            <div className="portfolio-card-modern" key={index}>
+              <div className="portfolio-image-wrapper">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="d-block h-100 w-100"
+                >
+                  <div className="portfolio-image-overlay"></div>
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={700}
+                    height={450}
+                    className="img-cover"
+                    loading="lazy"
+                    quality={90}
+                  />
+                </a>
+              </div>
+              <div className="portfolio-content-modern">
+                <div className="portfolio-tags-modern">
+                  {project.tags.map((tag, i) => (
+                    <span key={i} className="portfolio-tag-modern">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
-                <div className="col-lg-7">
-                  <div className="img">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="d-block overflow-hidden radius-10"
-                    >
-                      <Image
-                        src={project.image}
-                        alt={`${project.title} - ${project.description}`}
-                        width={700}
-                        height={500}
-                        className="radius-10"
-                        loading="lazy"
-                        quality={85}
-                        placeholder="blur"
-                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                      />
-                    </a>
-                  </div>
+                <h4 className="portfolio-title-modern">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    {project.title}
+                  </a>
+                </h4>
+                <p className="portfolio-desc-modern">{project.description}</p>
+                <div className="portfolio-link-wrapper">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="portfolio-link-modern"
+                    aria-label={`View ${project.title}`}
+                  >
+                    <span>View Project</span>
+                    <i className="ti-arrow-top-right"></i>
+                  </a>
                 </div>
               </div>
             </div>
@@ -216,7 +170,8 @@ function Portfolio() {
       <div className="sec-bottom mt-100">
         <div className="main-bg d-flex align-items-center">
           <h6 className="fz-14 fw-400">
-            Building clean, functional and visually engaging <span className="fw-600">web solutions.</span>
+            Building clean, functional and visually engaging{' '}
+            <span className="fw-600">web solutions.</span>
           </h6>
         </div>
       </div>
